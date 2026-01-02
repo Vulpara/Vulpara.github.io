@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northwall-Mistveil 的个人主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- 全局设置 --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* 设置为现代的深色渐变背景 */
+            background: linear-gradient(135deg, #1c1e26 0%, #2a2d3e 100%);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #ffffff;
+            min-height: 100vh; /* 确保占满全屏高度 */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* 垂直水平居中 */
+            padding: 20px;
+        }
+
+        /* --- 主容器卡片 --- */
+        .profile-card {
+            background: rgba(255, 255, 255, 0.05); /* 轻微透明的背景 */
+            backdrop-filter: blur(15px); /* 毛玻璃模糊效果 */
+            -webkit-backdrop-filter: blur(15px); /* 兼容 Safari */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* 微妙的边框 */
+            border-radius: 24px;
+            padding: 4rem 3rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* 柔和的阴影提升层次感 */
+            max-width: 500px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        /* 鼠标悬停时卡片轻微上浮 */
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* --- 头像 --- */
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%; /* 圆形 */
+            /* 自动使用你的 GitHub 头像 */
+            background-image: url('https://github.com/Northwall-Mistveil.png');
+            background-size: cover;
+            background-position: center;
+            border: 4px solid rgba(255, 255, 255, 0.15);
+            margin: 0 auto 1.5rem auto; /* 居中并设置底部间距 */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* --- 用户名 --- */
+        .username {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #fff, #a5c9ff); /* 文字渐变效果 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- 按钮容器 --- */
+        .buttons-container {
+            display: flex;
+            flex-direction: column; /* 手机端默认垂直排列 */
+            gap: 1rem; /* 按钮之间的间距 */
+        }
+
+        /* --- 按钮样式 --- */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.08); /* 按钮背景色 */
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .btn i {
+            margin-right: 10px; /* 图标和文字的间距 */
+            font-size: 1.2rem;
+        }
+
+        /* 按钮悬停效果 */
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.02); /* 轻微放大 */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* 针对不同按钮的微调（可选） */
+        .btn-github:hover { color: #a5c9ff; }
+        .btn-blog:hover { color: #a5ffb9; }
+        .btn-project:hover { color: #ffcca5; }
+
+
+        /* --- 响应式设计 (平板和桌面端) --- */
+        @media (min-width: 768px) {
+            .buttons-container {
+                flex-direction: row; /* 桌面端改为水平排列 */
+                justify-content: center;
+            }
+            .btn {
+                padding: 1rem 2rem;
+                min-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="profile-card">
+        <div class="avatar" role="img" aria-label="Northwall-Mistveil's avatar"></div>
+        
+        <h1 class="username">Northwall-Mistveil</h1>
+
+        <nav class="buttons-container">
+            <a href="https://github.com/Northwall-Mistveil" target="_blank" class="btn btn-github">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+
+            <a href="#" target="_blank" class="btn btn-blog">
+                <i class="fas fa-pen-nib"></i> 博客
+            </a>
+
+            <a href="#" target="_blank" class="btn btn-project">
+                <i class="fas fa-code"></i> 项目
+            </a>
+        </nav>
+    </main>
+
+</body>
+</html>
